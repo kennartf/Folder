@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  src: url(/static/fonts/JosefinSans-Medium.ttf);
+  font-family: Kennart;
+}
+
+body {
+  background-image: url(/static/images/CC.jpg);
+  /* background-color: rgb(46, 107, 131); */
+  height: 7rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* div .container {
+  margin: 3rem 10rem;
+  -webkit-box-direction: normal;
+  width: 20rem;
+} */
+
+legend {
+  color: lawngreen;
+  font-family: Kennart;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+label {
+  color: lawngreen;
+  font-family: Kennart;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* desktop */
+@media only screen and (max-width: 9000px) {
+  .form-group .btn {
+    margin: 1rem 1px auto 20.5rem;
+    width: 26rem;
+  }
+}
+
+/* ipad */
+@media only screen and (max-width: 810px) {
+  .form-group .btn {
+    margin: 1rem 1px auto 11.5rem;
+    width: 22rem;
+  }
+}
+/* iphon 11 pro */
+@media only screen and (max-width: 375px) {
+  .form-group .btn {
+    margin: 1rem 1px auto 3rem;
+    width: 14rem;
+  }
+}
+
+/* iphon 11 pro Max */
+@media only screen and (max-width: 414px) {
+  .form-group .btn {
+    margin: 1rem 1px auto 4.2rem;
+    width: 15rem;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .form-group .btn {
+    margin: 1rem 1px auto 4rem;
+    width: 16rem;
+  }
+}

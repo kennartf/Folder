@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% block head %}
+<title>{% block title %}500 Page{% endblock %}</title>
+
+<link rel="icon" href="{{ url_for('static', filename='Icon.ico') }}" />
+
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/404.css') }}"/>
+
+{% endblock %} 
+{% block content %}
+
+<h1>Something went wrong (500)</h1>
+<p>We're experiencing some trouble on or end. Please try again in the next time</p>
+ 
+{% endblock %}

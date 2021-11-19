@@ -1,0 +1,26 @@
+{% extends 'base.html' %} 
+{% block head %}
+<title>{% block title %}Reset Password{% endblock %}</title>
+
+<link rel="icon" href="{{ url_for('static', filename='/images/Icon.ico') }}" />
+
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/reset.css') }}"/>
+{% endblock %} 
+{% block content %}
+<body>
+  <br /><br /><br /><br /><br /><br /><br /><br />
+
+  <form class="resett-frm" action="" method="POST">
+    {{ form.hidden_tag() }}<!---form.hidden_tag()  this is preventing the form from attack--->
+
+    <legend class="border-bottom mb-4">Please enter your valid email</legend>
+
+    {{ form.email_address.label() }} 
+    {{ form.email_address(class="form-control", placeholder="email")}} 
+
+    <div class="reset-roup2">
+    {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+  </form>
+</body>
+{% endblock %}

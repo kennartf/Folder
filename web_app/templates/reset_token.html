@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+{% block head %}
+<title>{% block title %}Password Reset{% endblock %}</title>
+
+<link rel="icon" href="{{ url_for('static', filename='/images/Icon.ico') }}" />
+
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/token.css') }}"/>
+{% endblock %} 
+{% block content %}
+<body>
+  <br /><br /><br /><br /><br /><br /><br />
+
+  <form class="token-frm" action="" method="POST">
+    {{ form.hidden_tag() }}<!---form.hidden_tag()  this is preventing the form from attack--->
+
+    <legend class="border-bottom mb-4">Please enter your new password</legend>
+
+    {{ form.password.label() }} 
+    {{ form.password(class="form-control", placeholder='password')}} 
+
+    {{ form.confirm_password.label() }} 
+    {{ form.confirm_password(class="form-control", placeholder='confirm password')}} 
+
+    <div class="token-frm2">
+    {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+  </form>
+</body>
+{% endblock %}

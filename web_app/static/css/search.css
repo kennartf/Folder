@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-image: url(/static/images/rr.jpg);
+  background-color: rgb(46, 107, 131);
+  height: 7rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+/* desktop */
+@media only screen and (max-width: 9000px) {
+  div #sumitbtn {
+    margin: 1rem 1px auto 20.5rem;
+    width: 26rem;
+  }
+}
+
+/* ipad */
+@media only screen and (max-width: 810px) {
+  div #sumitbtn {
+    margin: 1rem 1px auto 11.5rem;
+    width: 32rem;
+  }
+}
+/* iphon 11 pro */
+@media only screen and (max-width: 375px) {
+  div #sumitbtn {
+    margin: 1rem 1px auto 3rem;
+    width: 20rem;
+  }
+}
+
+/* iphon 11 pro Max */
+@media only screen and (max-width: 414px) {
+  div #sumitbtn {
+    margin: 1rem 1px auto 4.2rem;
+    width: 15rem;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  div #sumitbtn {
+    margin: 1rem 1px auto 4rem;
+    width: 16rem;
+  }
+}

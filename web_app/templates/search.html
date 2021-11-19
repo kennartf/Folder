@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block head %}
+<title>{% block title %}Serch page Page{% endblock %}</title>
+
+<link rel="icon" href="{{ url_for('static', filename='/images/Icon.ico') }}" />
+
+<link
+  rel="stylesheet" href="{{ url_for('static', filename='/css/search.css') }}"/>
+{% endblock %} {% block content %}
+
+<body>
+  <br /><br /><br /><br /><br /><br /><br /><br />
+  <div class="container">
+    {% for post in posts %}
+
+    <h2><center>
+      <a href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title | safe}} </a>
+    </center>
+    </h2>
+    <br>
+
+    <center>
+      <a href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.contents | safe}} </a>
+    </center>
+    {% endfor %}
+  </div>
+</body>
+
+{% endblock %}

@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*navbar items font*/
+@font-face {
+  src: url(/static/fonts/JosefinSans-Medium.ttf);
+  font-family: Kennart;
+}
+
+html body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*navbar logo*/
+*[brand] {
+  margin: 0 0.1rem;
+}
+
+/*navbar*/
+.navbar {
+  background-color: #f9fafa !important;
+  border-bottom: 2px solid #c81b1b;
+  padding: 0.01rem 0rem;
+  background: #07272f !important;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+/*navbar items*/
+.navbar .nav-item a {
+  color: lawngreen !important;
+  font-size: 1.2rem;
+  margin: -2 auto 3rem;
+  display: inline-block;
+  font-family: Kennart;
+  font-weight: bold;
+  display: block;
+  padding: 0.2rem;
+  display: flex;
+}
+
+/*navbar toggler icon*/
+.navbar-toggler {
+  border-color: rgb(241, 236, 236) !important;
+}
+
+/*nav dropdown color*/
+.nav-link {
+  background: #07272f !important;
+}
+
+/*page footer item*/
+*[right-1] {
+  color: lawngreen !important;
+  padding: 0.3rem;
+}
+
+/* contact button */
+#button-button {
+  padding: 0.5rem 1rem;
+  background: #006669;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-size: 1.08em;
+  font-family: Kennart;
+}
+
+/* contact inputs */
+.text-input {
+  padding: 0.7rem 1rem;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  color: #444;
+  line-height: 1.5rem;
+  font-size: 1.2em;
+  font-family: "Lora", serif;
+}
+
+.alter-dismissable {
+  width: 100%;
+  margin: 3.7rem 0rem;
+  position: fixed;
+  border-radius: 5px;
+}
+
+/* Top footer */
+.footer {
+  background: #303036;
+  color: #d3d3d3;
+  height: 400px;
+  position: relative;
+}
+
+/*Footer split control */
+.footer .footer-content {
+  height: 350px;
+  display: flex;
+}
+
+/* Footer items */
+.footer .footer-content .footer-section {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* About, Quick link & Contact */
+.footer .footer-content h1,
+.footer .footer-content h2 {
+  color: white;
+  font-family: Kennart;
+}
+
+/* About first caption */
+.footer .footer-content .about h1 span {
+  color: #05f7ff;
+  font-family: Kennart;
+}
+
+/* Contact items */
+.footer .footer-content .about .contact span {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+/* About social icons */
+.footer .footer-content .about .socials a {
+  border: 1px solid gray;
+  width: 45px;
+  height: 41px;
+  padding-top: 5px;
+  margin-right: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3em;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+/* About icons hover */
+.footer .footer-content .about .socials a:hover {
+  border: 1px solid white;
+  color: white;
+  transition: all 0.3s;
+}
+
+/* Quick links */
+.footer .footer-content .links ul a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  transition: all 0.3s;
+  font-family: Kennart;
+}
+
+/* Quick link items */
+.footer .footer-content .links ul a:hover {
+  color: lawngreen;
+  margin-left: 15px;
+  transition: all 0.3s;
+}
+
+/*email & text area */
+.footer .footer-content .contact-form .contact-input {
+  background: #272727;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  line-height: 1.5rem;
+  padding: 0.9rem 1.4rem;
+  border: none;
+}
+
+/* input focus */
+.footer .footer-content .contact-form .contact-input:focus {
+  background: #1a1a1a;
+}
+
+/* input button */
+.footer .footer-content .contact-form .contact-btn {
+  float: right;
+  font-size: 1.1em;
+  font-family: Kennart;
+}
+
+/* footer bottom */
+.footer .footer-bottom {
+  background: #343a40;
+  color: #ffffff;
+  font-family: Kennart;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 20px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 934px) {
+  .content {
+    width: 100%;
+  }
+
+  .content .main-content .post {
+    width: 100%;
+  }
+
+  .content .main-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* slider */
+  .content .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* footer strech */
+  .footer {
+    height: auto;
+  }
+
+  /* footer content arrangement */
+  .footer .footer-content {
+    height: auto;
+    flex-direction: column;
+  }
+
+  /* form display */
+  .footer .footer-content .contact-form {
+    padding-bottom: 90px;
+  }
+
+  /* button display */
+  .footer .footer-content .contact-form .contact-btn {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content .main-content .post {
+    height: auto;
+  }
+
+  .content .main-content.single {
+    padding: 10px 20px;
+  }
+
+  .content .main-content .post .post-image {
+    width: 100%;
+  }
+
+  .content .main-content .post .post-preview {
+    width: 100%;
+  }
+
+  .content .main-content .post .read-more {
+    position: static;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .post-slider .next {
+    right: 10px;
+  }
+
+  .post-slider .prev {
+    left: 10px;
+  }
+}
+
+/* mobile phone*/
+@media only screen and (min-width: 768px) {
+  .img-banner {
+    display: block;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+}
+
+/* desktop view */
+@media only screen and (min-width: 1000px) {
+  #signup {
+    padding: 0px auto 0px 570px;
+    margin: 0px 2px;
+    font-family: Kennart;
+  }
+
+  #login {
+    padding: 0px 0px 0px 920px;
+    margin: auto 0px 0px;
+    font-family: Kennart;
+  }
+
+  #logout {
+    padding: 0px auto 0px 570px;
+    margin: 0px 18px;
+    font-family: Kennart;
+  }
+
+  #name {
+    padding: 0px 0px 0px 640px;
+    margin: auto 0px 0px;
+    font-family: Kennart;
+  }
+}
+
+/* desktop view */
+@media only screen and (min-width: 1000px) {
+  #signup {
+    padding: 0px auto 0px 570px;
+    margin: 0px 2px;
+    font-family: Kennart;
+  }
+
+  #login {
+    padding: 0px 0px 0px 920px;
+    margin: auto 0px 0px;
+    font-family: Kennart;
+  }
+
+  #logout {
+    padding: 0px auto 0px 570px;
+    margin: 0px 11px;
+    font-family: Kennart;
+  }
+
+  #name {
+    padding: 0px 0px 0px 660px;
+    margin: auto 0px 0px;
+    font-family: Kennart;
+  }
+}

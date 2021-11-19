@@ -1,0 +1,53 @@
+{% extends 'base.html' %} 
+{% block head %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="{{ url_for('static', filename='/images/Icon.ico') }}" />
+  
+    <link rel="stylesheet"href="{{ url_for('static', filename='/css/signup.css') }}"/>
+
+    <title>{% block title %}Register Page{% endblock %}</title>
+</head>
+{% endblock %} 
+{% block content %}
+<br /><br /><br /><br /><br />
+
+<form class="frm" action="" method="POST">
+  {{ form.hidden_tag() }}<!---form.hidden_tag()  this is preventing the form from attack--->
+
+  <legend class="border-bottom mb-4">Register to KennartFoundation</legend>
+
+  {{ form.username.label(class='form-control-label') }} 
+  {{ form.username(class="form-control", placeholder="username  (8-10 characters)") }} 
+
+  {{ form.email_address.label() }} 
+  {{ form.email_address(class="form-control", placeholder="email") }} 
+
+  {{ form.password1.label() }} 
+  {{ form.password1(class="form-control", placeholder="password") }}
+  
+  {{ form.password2.label() }} 
+  {{ form.password2(class="form-control", placeholder="confirm_password") }}
+
+  <div class="accountbtn">
+    {{ form.submit(class="btn btn-outline-info") }}
+  </div>
+
+  <div>
+    <h6>Already have an account?</h6>
+    <a id="loginbtn" class="btn btn-sm btn-outline-info " href="{{ url_for('auth.login')}}">Log In</a>
+  </div>
+</form>
+
+{% endblock %}
+
+
+    
+
+    
+  

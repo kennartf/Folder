@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% block head %}
+<title>{% block title %}403 Page{% endblock %}</title>
+
+<link rel="icon" href="{{ url_for('static', filename='/images/Icon.ico') }}" />
+
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/403.css') }}"/>
+{% endblock %} 
+{% block content %}
+<div></div><div></div><div>
+
+
+
+<h3>Sorry!!: Access Forbidden You don't have permission to update this post</h3>
+{% endblock %}

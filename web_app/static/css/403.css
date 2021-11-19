@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*navbar items font*/
+@font-face {
+  src: url(/static/fonts/JosefinSans-Medium.ttf);
+  font-family: Kennart;
+}
+
+body {
+  background-color: rgb(245, 241, 241);
+}
+
+h3 {
+  margin: 5rem auto 8rem;
+  color: rgb(245, 163, 11);
+  font-size: 1.5rem;
+  font-family: Kennart;
+  text-align: center;
+  color: brown;
+}

@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.account-img {
+  height: 100px;
+  width: 100px;
+  margin: -39px 10rem;
+  border: 4px solid #24e8f6;
+  border-radius: 3px;
+  margin: auto 100px 5px 8rem;
+}
+
+label {
+  color: rgb(248, 248, 248);
+  font-size: 1.3rem;
+}
+
+legend {
+  color: rgb(248, 248, 248);
+  font-size: 1.3rem;
+}
+
+/* login form */
+.Wrapper {
+  padding: 0.7rem 1rem;
+  color: rgb(255, 255, 255);
+  line-height: 1.8rem;
+  background: #07272f;
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 3px 15px;
+  width: 21rem;
+  height: 25rem;
+  border: 1px solid #ca1b1b;
+}
+
+h4 {
+  color: rgb(248, 248, 248);
+  padding: -1.1rem 0rem;
+}
+
+.Btn {
+  margin: 0.8rem 8.5rem;
+  width: 8rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .account-img {
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin: 0.2rem auto -50px auto;
+  }
+}

@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  src: url(/static/fonts/JosefinSans-Medium.ttf);
+  font-family: Kennart;
+}
+
+body {
+  background-image: url(/static/images/u.jpg);
+  background-color: rgb(46, 107, 131);
+  height: 7rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.token-frm {
+  margin: auto;
+  width: 13rem;
+  padding: 3.5rem 0rem;
+}
+
+label {
+  color: rgb(248, 248, 248);
+  font-size: 1.3rem;
+}
+
+legend {
+  color: lawngreen;
+  font-size: 1.2rem;
+  font-family: Kennart;
+  text-align: center;
+}
+
+body {
+  background-color: rgb(183, 234, 236);
+}
+
+.token-frm .btn {
+  margin: 1.3rem 4rem;
+  width: 10rem;
+}
+
+#nb {
+  margin: -2.6rem auto 19rem 13.6rem;
+  width: 4.2rem;
+}
+
+.token-frm {
+  background: rgb(0, 0, 0);
+  border-radius: 0.5rem;
+  padding: 15px 18px;
+  width: 20rem;
+  border: 1px solid #dddddd;
+  border: 1px solid #ca1b1b;
+  height: 19rem;
+}
+
+.token-frm h6 {
+  color: white;
+  margin: 1rem 0rem;
+}

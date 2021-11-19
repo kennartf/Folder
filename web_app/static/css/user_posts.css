@@ -1,0 +1,49 @@
+h1 {
+  font-size: 1.6rem;
+  font-family: Verdana, Tahoma, sans-serif;
+  color: rgb(38, 10, 197);
+  text-align: center;
+  padding: 2rem;
+}
+
+.content-section {
+  background: rgb(162, 248, 195);
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+  color: #444444;
+  /* margin: 0 1.2rem; */
+}
+
+.article-img {
+  height: 120px;
+  width: 116px;
+  margin-right: 16px;
+  border: 4px solid #24e8f6;
+  border-radius: 3px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}

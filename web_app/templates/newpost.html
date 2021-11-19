@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+{% block head %}
+<title>{% block title %}Friends Page{% endblock %}</title>
+<link rel="icon" href="{{ url_for('static', filename='/images/Icon.ico') }}" />
+
+<link rel="stylesheet"href="{{ url_for('static', filename='/css/post.css') }}"/>
+{% endblock %} 
+{% block content %}
+<br><br><br><br><br><br><br>
+
+<div class="container">
+  <form method="POST" action="">
+    {{ form.hidden_tag() }}
+
+    <legend class="border-bottom mb-4">{{ legend }}</legend>
+
+    {{ form.title.label(class="form-control-label")}} 
+    {{ form.title(class="form-control form-control-lg", placeholder="title") }} 
+
+    {{ form.contents.label(class="form-control-label" )}} 
+    {{ form.contents(class="form-control form-control-lg", placeholder="content not more than 200")}}
+
+    <div class="form-group">
+      {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+  </form>
+  
+   {{ ckeditor.load() }}
+   {{ ckeditor.config(name='contents') }}
+</div>
+{% endblock %}

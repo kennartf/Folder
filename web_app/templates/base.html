@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- Custom Styling -->
+      <link rel="stylesheet"href="{{url_for('static', filename='/css/bootstrap.css') }}"/>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"/>
+
+      <link rel="stylesheet" href="{{url_for('static', filename='web-fonts-with-css/css/fontawesome-all.min.css')}}">
+
+
+
+      {% block head %}
+      <title>{% block title %}Home{% endblock %}</title>
+      {% endblock %}
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-light">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('views.home')}}"><img
+               brand src="{{url_for('static', filename='/images/KK.png')}}"height="48" width="48"alt="logo"/></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false"aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item" right-16>
+                     <a class="nav-link active" aria-current="page"href="{{ url_for('views.home') }}">Home</a>
+                  </li>
+                  
+                  <li class="nav-item" right-16>
+                     <a class="nav-link active" aria-current="page"href="{{ url_for('views.about') }}">About Me</a>
+                  </li>
+
+                  <!-- Login user if authenticated -->
+                  {% if current_user.is_authenticated %}
+                  <li class="nav-item dropdown" right-16>
+                     <a class="nav-link dropdown-toggle"href="#" id="scroll"role="button"data-bs-toggle="dropdown"aria-expanded="false">Settings</a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li class="nav-item" right-16>
+                           <a class="nav-link active" aria-current="page"href="{{ url_for('account.account')}}">Account</a>
+                        </li>
+
+                        <li class="nav-item" right-16>
+                           <a class="nav-link active"aria-current="page"href="{{ url_for('main_page.main')}}">View Posts</a>
+                        </li>
+
+                        <li class="nav-item" right-16>
+                           <a class="nav-link active"aria-current="page"href="{{ url_for('posts.new_post')}}">New-Post</a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <li class="nav-item" right-16 id="name">
+                     <a class="nav-link">Welcome, {{ current_user.username }}</a>
+                  </li>
+                  
+                  <div class="nav-item" id="logout"></div>
+                  <li class="nav-item" right-16>
+                     <a class="nav-link active" aria-current="page"href="{{ url_for('auth.logout')}}">Logout</a>
+                  </li>
+
+                  {% else %}
+                  <li class="nav-item" right-16 id="login">
+                     <a class="nav-link active"aria-current="page"href="{{ url_for('auth.login')}}">Login</a>
+                  </li>
+
+                  <li class="nav-item" right-16 id="signup">
+                     <a class="nav-link active" aria-current="page" href="{{ url_for('auth.signup')}}">SignUp</a>
+                  </li>
+               </ul>
+               {% endif %}
+            </div>
+         </div>
+      </nav>
+      <!-- Custom message flashing -->
+      {% with messages = get_flashed_messages(with_categories=true) %} 
+      {% if messages %} 
+      {% for category, message in messages %}
+      <div class="alert alert-{{ category }} alter-dismissable fade show" id="msg">
+         <button type="button" class="close" data-bs-dismiss="alert">
+         <span aria-hidden="true">&times;</span>
+         </button>
+         {{ message }}
+      </div>
+      {% endfor %} 
+      {% endif %} 
+      {% endwith %}
+
+      <!-- Custom Styling -->
+      <script src="{{ url_for('static', filename='/css/bootstrap.js') }}"></script>
+      {% block content %} {% endblock %}
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+     
+      <!-- footer -->
+      <div class="footer">
+         <div class="footer-content">
+            <div class="footer-section about">
+               <h1 class="logo-text"><span>Kennart</span>Foundation</h1>
+
+               <p>
+                  Kennart is a fictional blog conceived for the purpose of posting
+                  and expressing your feelings to the others in any form.
+               </p>
+
+               <div class="contact">
+                  <span><i class="fa fa-phone"></i> &nbsp; (+233)204733427</span>
+                  <span><i class="fas fa-envelope"></i> &nbsp; info@kennart.com</span>
+               </div>
+               
+               <div class="socials">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="0246718751"><i class="fa fa-address-card" aria-hidden="true"></i></a>
+                  <a href="mailto:kennartfoundation@gmail.com" target="_blank"><i class="fab fa-mail"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+               </div>
+            </div>
+            
+            <div class="footer-section links">
+               <h2>Quick Links</h2>
+               <br />
+               <ul>
+                  <a href="#"><li>Events</li></a>
+                  <a href="#"><li>Team</li></a>
+                  <a href="#"><li>Mentores</li></a>
+                  <a href="https://dsenterprise.whats.bz" target="_blank"><li>Gallery</li>
+                  </a><a href="https://github.com/kennartfoundation" target="_blank"><li>Github</li>
+                  </a>
+               </ul>   
+            </div>
+
+            <div class="footer-section contact-form">
+               <h2>Contact us</h2>
+               <br />
+               <form action="{{ url_for('contact_admin.contact')}}" method="POST">
+                  <input type="email" name="email"  id="email" class="text-input contact-input" required placeholder="Your email address..."/>
+                  <textarea name="message" id="message" class="text-input contact-input" placeholder="Your message... or.. Comment"></textarea>
+                  <button type="submit" id="button-button" class="btn btn-sm contact-btn"><i class="fas fa-envelope"></i>Send</button>
+               </form>
+               <p class="fa fa-arrow-up"><a href="#" aria-hidden="true">Back to top</a></p>
+            </div>
+         </div>
+
+         <div class="footer-bottom">
+            &copy; 2021 Kennart.com | Designed by Kennart
+         </div>
+      </div>
+   </body>
+</html>

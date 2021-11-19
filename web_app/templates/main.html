@@ -1,0 +1,54 @@
+{% extends 'base.html' %} 
+{% block head %}
+<title>{% block title %}Main Page{% endblock %}</title>
+
+<link rel="icon" href="{{ url_for('static', filename='/images/Icon.ico') }}" />
+
+<link
+  rel="stylesheet"href="{{ url_for('static', filename='/css/main.css') }}"/>
+{% endblock %} 
+{% block content %}
+
+<div class="container-sm"">
+  <br><br><br><br><br>
+
+   <div id="sumitbtn">
+    <a class="btn btn-outline-info"  href="{{ url_for('posts.new_post')}}">Create a post</a>
+  </div>
+  <br>
+  
+  <form class="d-flex" right-16 id="serh" method="POST" action="{{ url_for('Search.search')}}" name="searchh">
+    {{ form.hidden_tag() }}
+    {{ form.searchh(class='form-control', autocomplete="on", placeholder="Search post, or something")}}
+    {{ form.submit(class="btn btn-outline-info") }}
+  </form>
+
+  {% for post in posts.items %}
+  <article class="media content-section">
+    <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}" alt="img"/> 
+    <div class="media-body">
+      <div class="article-metadata">
+        <h4>
+          <a class="mr-2" href="{{ url_for('posts.user_posts', username=post.author.username )}}">{{ post.author.username }}</a>
+        </h4>
+        <small class="text-muted">{{ post.date_posted.strftime('%A, %B-%d-%Y, %X %p ') }}</small>
+      </div>
+
+      <h5>
+        <a class="article-title" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a>
+      </h5>
+      
+      <p class="article-content">{{ post.contents | safe }}</p>
+    </div>
+  </article>
+  {% endfor %} 
+  {% for page_num in posts.iter_pages (left_edge=1, right_edge=1, left_current=1, right_current=2) %} 
+  {% if page_num %} {% if posts.page == page_num %}
+
+  <a class="btn btn-info mb-4" href="{{ url_for('main_page.main', page=page_num) }}">{{ page_num}}</a>
+  {% else %}
+  <a class="btn btn-outline-info mb-4" href="{{ url_for('main_page.main', page=page_num) }}">{{ page_num}}</a>
+  {% endif %}{% else %}{% endif %} {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*navbar items font*/
+@font-face {
+  src: url(/static/fonts/JosefinSans-Medium.ttf);
+  font-family: Kennart;
+}
+
+body {
+  background-color: rgb(245, 241, 241);
+}
+
+.error-message {
+  margin: 8rem 0px;
+  color: black;
+  font-size: 1rem;
+  font-family: Kennart;
+  text-align: center;
+  color: brown;
+}

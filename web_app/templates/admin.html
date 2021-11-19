@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+{% block head %}
+<title>{% block title %}Login{% endblock %}</title>
+
+<link rel="icon" href="{{ url_for('static', filename='/images/Icon.ico') }}" />
+
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/admin.css') }}"/>
+{% endblock %} 
+{% block content %}
+<body>
+  <br /><br /><br /><br /><br /><br /><br />
+
+  
+
+  <form class="admin-frm" action="" method="POST">
+    {{ form.hidden_tag() }}
+
+    <legend class="border-bottom mb-4">Admin Only</legend>
+
+    {{ form.username.label() }} 
+    {{ form.username(class="form-control", placeholder="Username")}} 
+
+    {{ form.password.label() }} 
+    {{ form.password(class="form-control", placeholder="password")}} 
+
+    <div class="admingrp">
+    {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+    {% if failed %}
+  <center>
+    <small style="color: red;">Incorrect Username or Password</small>
+  </center>
+  {% endif %}
+  </form>
+</body>
+{% endblock %}

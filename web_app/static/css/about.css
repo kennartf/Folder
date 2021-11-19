@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(243, 243, 243);
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.img-banner {
+  display: none;
+}
+
+.img-info {
+  width: 100%;
+}
+
+.img-info h1 {
+  padding: 30px 30px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: #111;
+  line-height: 44px;
+}
+
+.img-info h3 {
+  padding: 30px 30px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: #111;
+  line-height: 44px;
+}
+
+.img-info p {
+  padding: 0px 30px 20px;
+  font-family: Arial;
+  font-size: 16px;
+  color: #111;
+  line-height: 24px;
+}
+
+.img-me {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .img-banner {
+    display: block;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .wrapper {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .img-info h2 {
+    padding: 20px 0px 0px;
+  }
+
+  .img-info p {
+    padding: 20px 0px 0px;
+  }
+
+  .img-me {
+    padding-top: 30px;
+  }
+}
+
+.wrapper .my-self .article-img {
+  height: 17rem;
+  width: 17rem;
+  margin: -25rem 22rem;
+  margin-bottom: 4rem;
+}
+
+.wrapper .my-self h1,
+.wrapper .my-self h3 {
+  font-family: Kennart;
+  padding: 4.5rem 17rem 20px;
+  margin-bottom: -40rem;
+}
+
+.wrapper .my-self h1 {
+  font-family: Kennart;
+  padding: -2rem 1rem 20px;
+}
+
+/* next */
+@media only screen and (min-width: 1000px) {
+  .wrapper {
+    width: 1000px;
+  }
+
+  .img-info {
+    width: 50%;
+    float: right;
+  }
+
+  .img-info h2 {
+    padding: 20px 0px 0px 30px;
+  }
+
+  .img-info p {
+    padding: 20px 0px 0px 30px;
+  }
+
+  .img-me {
+    padding-top: 0px;
+    width: 15%;
+    float: left;
+  }
+}

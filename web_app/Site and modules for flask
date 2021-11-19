@@ -1,0 +1,52 @@
+🔦🔦🔦Site to format html code🔦🔦🔦
+
+https://www.freeformatter.com/html-formatter.html#ad-output
+
+
+🔦🔦🔦COMMANDS # for image processing:🔦🔦🔦
+# sudo apt-get install python3-pil python3-pil.imagetk
+
+
+🔦🔦🔦fonts use:🔦🔦🔦
+# Roboto Slab  font
+
+
+🔦🔦🔦for slide slick:🔦🔦🔦
+# https://kenwheeler.github.io/slick/ for slick
+# https://www.google.com/search?client=firefox-b-e&q=jquery
+# https://fontawesome.com/start
+
+
+🔦🔦🔦Site to read about languages and other staffs🔦🔦🔦
+https://www.tutorialspoint.com/questions/category/python
+
+
+🔦🔦🔦Site to read about Linux🔦🔦🔦
+https://linuxjourney.com/lesson/history-command
+
+
+
+🔦🔦🔦Site to read about Linux🔦🔦🔦
+https://phoenixnap.com/kb/linux-ssh-security?utm_term=&utm_campaign=&utm_source=adwords&utm_medium=ppc&hsa_ad=545481684602&hsa_kw=&hsa_cam=14630707084&hsa_grp=127504961735&hsa_net=adwords&hsa_mt=b&hsa_ver=3&hsa_tgt=dsa-457496810630&hsa_src=g&hsa_acc=2931804872&gclid=CjwKCAjw7--KBhAMEiwAxfpkWMhscI2MSLGbVQdoVYhEfqL76krBgy9ImUErY3IDsnE54D_Ejatg-RoC2aIQAvD_BwE
+
+
+
+🔦🔦🔦How to create or upload project to github🔦🔦🔦
+https://djcb.link/y/vscode-github
+
+2075  git --version
+ 2076  clear
+ 2077  git config --global user.name kennart
+ 2078  git config --global user.email kennartfoundation@gmail.com
+ 2079  git config --list
+ 2080  clear
+ 2081  git init my-project
+
+
+ 🔦🔦🔦How to host flask app on heroku🔦🔦🔦
+pip install gunicorn
+echo >Procfile
+web: gunicorn run:app
+pip freeze >requirements.txt
+pip install MarkupSafe  
+replace with = MarkupSafe==2.0.1
